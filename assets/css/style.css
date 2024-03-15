@@ -1,0 +1,17 @@
+/* Reset default margin, padding, and border for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Set margin and font styles for the entire body */
+body {
+    margin: 0px 0px;
+}
+
+/* Styling for buttons */
+.btn {
+    width: 30rem;
+    height: 9rem;
+}
