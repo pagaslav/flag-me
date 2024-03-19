@@ -11,3 +11,4 @@ cloudinary_python.txt
 .DS_Store
 # Ignore .DS_Store files in specific directories
 **/.DS_Store
+.vscode/
