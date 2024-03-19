@@ -10,8 +10,42 @@ body {
     margin: 0px 0px;
 }
 
+main {
+    flex: 1 0 auto;
+    margin-top: 8rem;
+}
+
+/* Learn Page */
+
+/* Styling for the carousel */
+.carousel {
+    max-width: 40rem;
+    margin: 0 auto;
+    width: 80%;
+}
+
+#flagImage {
+    border: 0.5px solid grey;
+}
+
 /* Styling for buttons */
 .btn {
     width: 30rem;
     height: 9rem;
+}
+
+/*Styling for flags*/
+.flag-image {
+    object-fit: cover;
+    width: 100%;
+    border: none;
+
+}
+
+.is-flipped .card-front {
+    transform: rotateY(180deg);
+}
+
+.is-flipped .card-back {
+    transform: rotateY(0deg);
 }
