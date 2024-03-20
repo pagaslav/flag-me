@@ -33,7 +33,7 @@
     <header>
         <nav class="navbar bg-body-tertiary fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Flag Me</a>
+                <a class="navbar-brand" href="index.html">Flag Me</a>
                 <span class="navbar-text mx-5 d-none d-md-block">
                     Discover flags, unlock knowledge
                 </span>
@@ -50,10 +50,10 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Learn</a>
+                                <a class="nav-link" href="learn.html">Learn</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -61,8 +61,9 @@
                                     Quizes
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Guess the country</a></li>
-                                    <li><a class="dropdown-item" href="#">Guess the flag</a></li>
+                                    <li><a class="dropdown-item" href="guess-the-country.html">Guess the country</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="guess-the-flag.html">Guess the flag</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -77,11 +78,17 @@
         <!-- Container for vertically centering buttons -->
         <div class="d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
             <!-- Primary button with large size -->
-            <button id="learnButton" class="btn btn-primary btn-lg mb-4" type="button">Learn</button>
+            <a href="learn.html">
+                <button id="learnButton" class="btn btn-primary btn-lg mb-4" type="button">Learn</button>
+            </a>
             <!-- Primary button with large size -->
-            <button id="countryButton" class="btn btn-primary btn-lg mb-4" type="button">Guess the Country</button>
+            <a href="guess-the-country.html">
+                <button id="countryButton" class="btn btn-primary btn-lg mb-4" type="button">Guess the Country</button>
+            </a>
             <!-- Primary button with large size -->
-            <button id="flagButton" class="btn btn-primary btn-lg mb-4" type="button">Guess the Flag</button>
+            <a href="guess-the-flag.html">
+                <button id="flagButton" class="btn btn-primary btn-lg mb-4" type="button">Guess the Flag</button>
+            </a>
         </div>
     </main>
 
