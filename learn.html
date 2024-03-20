@@ -23,8 +23,6 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Title and Favicon -->
-    <!-- <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon"> -->
     <title>Flag me Home Page</title>
 </head>
 
@@ -33,7 +31,7 @@
     <header>
         <nav class="navbar bg-body-tertiary fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Flag Me</a>
+                <a class="navbar-brand" href="index.html">Flag Me</a>
                 <span class="navbar-text mx-5 d-none d-md-block">
                     Discover flags, unlock knowledge
                 </span>
@@ -78,25 +76,22 @@
 
     <main class="mb-5">
 
-        <div id="carouselExampleFade" class="carousel slide carousel-fade">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="" class="d-block w-100" alt="Flag of" id="flagImage">
+        <div class="text-center mb-3">
+            <div class="row justify-content-center">
+                <div class="col-md-auto mr-5">
+                    <img src="assets/images/previous.svg" class="learnArrows" alt="Flag of" id="learnArrowsPrev">
+                </div>
+                <div class="col-md-auto">
+                    <img src="assets/images/next.svg" class="learnArrows" alt="Flag of" id="learnArrowsNext">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                data-bs-slide="prev">
-                <!-- data-bs-slide="prev" onclick="showPreviousFlag()"> -->
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                data-bs-slide="next">
-                <!-- data-bs-slide="next" onclick="showNextFlag()"> -->
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
+
+
+        <div id="learnImageContainer">
+            <img src="" class="d-block" alt="Flag of" id="flagImage">
+        </div>
+
 
         <div class="text-center mt-5">
             <h2 id="country">Country</h2>
@@ -161,9 +156,8 @@
     <!-- Link to Bootstrap JavaScript bundle from CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Ссылка на JavaScript -->
-    <script type="module" src="assets/js/script.js"></script>
-    <!-- <script src="assets/js/script.js"></script> -->
+    <!-- Link to learn.js -->
+    <script type="module" src="assets/js/learn.js"></script>
 
 
 </body>
