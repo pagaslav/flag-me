@@ -151,16 +151,8 @@
     <!-- Link to Bootstrap JavaScript bundle from CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-        // Retrieving results array from localStorage
-        const resultsArray = JSON.parse(localStorage.getItem('resultsArray'));
-
-        // Displaying the score
-        const scoreElement = document.getElementById('score');
-        scoreElement.textContent =
-            `Your score: ${resultsArray.reduce((total, result) => total + result, 0)} out of ${resultsArray.length}`;
-    </script>
-
+    <!-- Including the JavaScript file for handling results -->
+    <script src="assets/js/result.js"></script>
 </body>
 
 </html>
