@@ -21,7 +21,7 @@ main {
     width: 30px;
 }
 
-#learnImageContainer {
+.ImageContainer {
     display: flex;
     justify-content: center;
     /* Horizontally center */
@@ -29,7 +29,7 @@ main {
     /* Vertically center */
 }
 
-#flagImage {
+.flagImage {
     border: 0.5px solid grey;
     width: 500px;
 }
