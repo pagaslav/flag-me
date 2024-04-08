@@ -115,3 +115,9 @@ function handleAnswer(option) {
         window.location.href = 'result.html';
     }
 }
+
+// Variable to track the current question
+let currentQuestionIndex = 0;
+
+// Displaying the first question when the page loads
+displayQuestion();
