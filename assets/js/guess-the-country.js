@@ -19,3 +19,48 @@ function shuffleArray(array) {
         array[j] = temp;
     }
 }
+
+// Generating an array of objects with the specified number of questions
+function generateQuestionsArray(flagsDataArray, totalQuestions) {
+    let questionsArray = [];
+
+    // Shuffling flags array
+    shuffleArray(flagsDataArray);
+
+    // Adding questions to the array in the desired order
+    for (let i = 0; i < totalQuestions; i++) {
+        const flag = flagsDataArray[i];
+        const question = {
+            image: flag.image,
+            correctAnswer: flag.country,
+            options: []
+        };
+
+        // Adding correct answer to options
+        question.options.push(flag.country);
+
+        // Generating incorrect options
+        while (question.options.length < 4) {
+            const randomFlag = getRandomElement(flagsDataArray);
+            if (!question.options.includes(randomFlag.country)) {
+                question.options.push(randomFlag.country);
+            }
+        }
+
+        // Shuffling options
+        shuffleArray(question.options);
+
+        // Adding question to questionsArray
+        questionsArray.push(question);
+    }
+
+    return questionsArray;
+}
+
+// Total number of questions
+const totalQuestions = 12;
+
+// Creating an array of questions
+let questionsArray = generateQuestionsArray(flagsDataArray, totalQuestions);
+
+// Now, questionsArray contains 12 objects with question data.
