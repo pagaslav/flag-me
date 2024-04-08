@@ -64,3 +64,6 @@ const totalQuestions = 12;
 let questionsArray = generateQuestionsArray(flagsDataArray, totalQuestions);
 
 // Now, questionsArray contains 12 objects with question data.
+
+// Getting a reference to the container for answer options
+const optionsContainer = document.getElementById('optionsContainer');
