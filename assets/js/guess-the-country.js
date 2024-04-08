@@ -66,3 +66,52 @@ const optionsContainer = document.getElementById('optionsContainer');
 
 // Array to store results
 let resultsArray = [];
+
+// Function to display the question and answer options
+function displayQuestion() {
+    // Getting the current question
+    const currentQuestion = questionsArray[currentQuestionIndex];
+
+    // Displaying the flag image
+    const flagImage = document.getElementById('GuessCountryImage');
+    flagImage.src = currentQuestion.image;
+
+    // Clearing the container with answer options
+    optionsContainer.innerHTML = '';
+
+    // Creating and adding buttons with answer options
+    currentQuestion.options.forEach(option => {
+        const button = document.createElement('button');
+        button.textContent = option;
+        button.classList.add('btn', 'btn-primary', 'option-button');
+        button.addEventListener('click', () => handleAnswer(option));
+        optionsContainer.appendChild(button);
+    });
+}
+
+// Function to handle user's answer
+function handleAnswer(option) {
+    // Getting the correct answer for the current question
+    const correctAnswer = questionsArray[currentQuestionIndex].correctAnswer;
+
+    // Checking if the chosen answer is correct
+    const isCorrect = option === correctAnswer ? 1 : 0;
+
+    // Adding the answer result to the results array
+    resultsArray.push(isCorrect);
+
+    // Saving results array to localStorage
+    localStorage.setItem('resultsArray', JSON.stringify(resultsArray));
+
+    // Moving to the next question
+    currentQuestionIndex++;
+
+    // Checking if there are more questions
+    if (currentQuestionIndex < totalQuestions) {
+        // Displaying the next question
+        displayQuestion();
+    } else {
+        // If all questions are answered, redirecting to the results page
+        window.location.href = 'result.html';
+    }
+}
