@@ -9,11 +9,7 @@ function getRandomElement(array) {
 // Function to shuffle an array
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
-
-        // Generating a random index j within the range [0, i]
         const j = Math.floor(Math.random() * (i + 1));
-
-        // Swapping elements in the array to shuffle it
         let temp = array[i];
         array[i] = array[j];
         array[j] = temp;
@@ -67,3 +63,6 @@ let questionsArray = generateQuestionsArray(flagsDataArray, totalQuestions);
 
 // Getting a reference to the container for answer options
 const optionsContainer = document.getElementById('optionsContainer');
+
+// Array to store results
+let resultsArray = [];
