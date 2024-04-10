@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Schoolbell&display=swap');
+
 /* Reset default margin, padding, and border for all elements */
 * {
     margin: 0;
@@ -8,6 +10,20 @@
 /* Set margin and font styles for the entire body */
 body {
     margin: 0px 0px;
+}
+
+/* Styling for the logo text */
+#logo-font {
+    font-family: 'Luckiest Guy', sans-serif;
+    font-size: 48px;
+    color: #343a40;
+    padding-left: 23px;
+}
+
+/* Styling for the slogan text */
+#slogan-font {
+    font-family: 'Schoolbell', sans-serif;
+    font-size: 28px;
 }
 
 main {
