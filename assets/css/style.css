@@ -11,6 +11,7 @@
 body {
     margin: 20px 20px;
     font-family: 'Lato', sans-serif;
+    background-color: #f5f5f5;
 }
 
 main {
@@ -106,7 +107,6 @@ main {
     -webkit-font-smoothing: antialiased;
 }
 
-
 /* Icon separator */
 .btn-sep {
     padding: 25px 60px 25px 120px;
@@ -196,7 +196,6 @@ main {
 }
 
 /* Icons */
-
 .icon-info:before {
     content: "\f05a";
 }
@@ -208,8 +207,6 @@ main {
 .icon-heart:before {
     content: "\f024";
 }
-
-
 
 /* Styling for the logo text */
 #logo-font {
@@ -226,7 +223,6 @@ main {
 }
 
 /* Learn Page */
-
 .learnArrows {
     width: 30px;
 }
@@ -234,14 +230,20 @@ main {
 .ImageContainer {
     display: flex;
     justify-content: center;
-    /* Horizontally center */
     align-items: center;
-    /* Vertically center */
 }
 
 .flagImage {
-    border: 0.5px solid grey;
+    /* border: 0.5px solid grey; */
     width: 500px;
+}
+
+.flagImage-guess-flag {
+    width: 20rem;
+    margin: auto;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    cursor: pointer;
 }
 
 #description {
@@ -249,6 +251,16 @@ main {
     font-size: 1.125rem;
     margin-left: 5rem;
     margin-right: 5rem;
+}
+
+/* Styles for the container with flags */
+.options-container {
+    margin-top: 20px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 
 
