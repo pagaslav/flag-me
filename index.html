@@ -39,18 +39,30 @@
 <body>
     <!-- Header section -->
     <header>
-        <nav class="navbar bg-body-tertiary fixed-top">
+        <!-- Main navigation section -->
+        <nav class="navbar bg-body-tertiary fixed-top" aria-label="Main Navigation">
             <div class="container-fluid">
+
+                <!-- Brand logo -->
                 <a id="logo-font" class="navbar-brand" href="index.html">
                     Flag Me
                 </a>
-                <span id="slogan-font" class="navbar-text mx-5 d-none d-md-block">
+
+                <!-- Slogan -->
+                <h1 id="slogan-font" class="navbar-text mx-5 d-none d-md-block" aria-level="1">
                     Discover flags, unlock knowledge
-                </span>
+                </h1>
+
+                <!-- Navigation toggler button -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"
+                    tabindex="0">
+
+                    <!-- Added tabindex attribute for keyboard accessibility -->
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+                <!-- Offcanvas navigation -->
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
@@ -58,24 +70,23 @@
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+                        <!-- Main menu -->
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" aria-label="Main Menu">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="learn.html">Learn</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Quizes
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="guess-the-country.html">Guess the country</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="guess-the-flag.html">Guess the flag</a></li>
-                                </ul>
+                            <li class="nav-item">
+                                <a class="nav-link" href="guess-the-country.html">Guess the country</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="guess-the-flag.html">Guess the flag</a>
+                            </li>
+                        </ul>
+                        </li>
                         </ul>
                     </div>
                 </div>
