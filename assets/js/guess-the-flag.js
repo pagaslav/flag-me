@@ -82,7 +82,8 @@ function displayQuestion() {
         const img = document.createElement('img');
         img.src = option.image;
         img.alt = `Flag of ${option.country}`;
-        img.classList.add('d-block', 'flagImage');
+        img.classList.add('d-block', 'flagImage-guess-flag');
+
         img.addEventListener('click', () => handleAnswer(option.country));
         optionsContainer.appendChild(img);
     });
