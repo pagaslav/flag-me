@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Schoolbell&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Luckiest+Guy&family=Schoolbell&family=Zilla+Slab+Highlight:wght@400;700&display=swap');
 
 /* Reset default margin, padding, and border for all elements */
 * {
@@ -9,8 +9,205 @@
 
 /* Set margin and font styles for the entire body */
 body {
-    margin: 0px 0px;
+    margin: 20px 20px;
+    font-family: 'Lato', sans-serif;
 }
+
+main {
+    flex: 1 0 auto;
+    margin-top: 8rem;
+}
+
+/* Styles for the container displaying a random quote */
+.quote-container {
+    /* Center the container horizontally */
+    text-align: center;
+    /* Add space above and below the container */
+    /* margin-top: 8rem; */
+    margin-bottom: 5rem;
+    /* Add padding on the left and right sides */
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+/* Styles for the font size control icons */
+.font-icon {
+    font-size: 24px;
+    color: #333;
+    /* Цвет иконок */
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/* Styles for the quote text */
+.quote {
+    font-family: 'Zilla Slab Highlight', sans-serif;
+    font-size: 24px;
+    line-height: 1.6;
+    color: #333;
+    /* Set italic style for the quote text */
+    font-style: italic;
+}
+
+#randomQuote a {
+    font-family: 'Lato', sans-serif;
+    /* Display the author name as a block element */
+    display: block;
+    /* Add margin space above the author name */
+    /* margin-top: 1rem; */
+    /* Set color for the author name */
+    color: #666;
+}
+
+/* General button style */
+.btn {
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 25px 80px;
+    display: inline-block;
+    margin: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 23rem;
+    height: 5rem;
+}
+
+.btn:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/* Pseudo elements for icons */
+.btn:before {
+    font-family: 'FontAwesome';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* Icon separator */
+.btn-sep {
+    padding: 25px 60px 25px 120px;
+}
+
+.btn-sep:before {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+/* Button LEARN */
+.btn-learn {
+    background: #3498db;
+    color: #fff;
+}
+
+.btn-learn:hover {
+    background: #2980b9;
+    color: #fff;
+}
+
+.btn-learn:active {
+    background: #2980b9;
+    top: 2px;
+}
+
+.btn-learn:before {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    line-height: 3;
+    font-size: 170%;
+    width: 60px;
+    color: #fff;
+}
+
+/* Button Guess the Country */
+.btn-guess-country {
+    background: #2ecc71;
+    color: #fff;
+}
+
+.btn-guess-country:hover {
+    background: #27ae60;
+    color: #fff;
+}
+
+.btn-guess-country:active {
+    background: #27ae60;
+    top: 2px;
+}
+
+.btn-guess-country:before {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    line-height: 3;
+    font-size: 170%;
+    width: 60px;
+}
+
+/* Button Guess the Flag */
+.btn-guess-flag {
+    background: #e74c3c;
+    color: #fff;
+}
+
+.btn-guess-flag:hover {
+    background: #c0392b;
+    color: #fff;
+}
+
+.btn-guess-flag:active {
+    background: #c0392b;
+    top: 2px;
+}
+
+.btn-guess-flag:before {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    line-height: 3;
+    font-size: 170%;
+    width: 60px;
+}
+
+/* Icons */
+
+.icon-info:before {
+    content: "\f05a";
+}
+
+.icon-cart:before {
+    content: "\f7a2";
+}
+
+.icon-heart:before {
+    content: "\f024";
+}
+
+
 
 /* Styling for the logo text */
 #logo-font {
@@ -26,10 +223,28 @@ body {
     font-size: 28px;
 }
 
-main {
-    flex: 1 0 auto;
-    margin-top: 8rem;
+
+/* #learnButton {
+    background-color: #007bff;
+    color: white;
+    border: 2px solid transparent;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
+
+#learnButton:hover {
+    background-color: white;
+    color: #007bff;
+    border: 2px solid #007bff;
+    transform: translateY(-5px);
+} */
+
 
 /* Learn Page */
 
@@ -50,8 +265,17 @@ main {
     width: 500px;
 }
 
-/* Styling for buttons */
-.btn {
-    width: 30rem;
-    height: 9rem;
+/* Footer */
+.social-icons a {
+    color: #495057;
+    margin-right: 15px;
+}
+
+.social-icons a .fab {
+    font-size: 2em;
+    vertical-align: middle;
+}
+
+.social-icons a:hover {
+    color: #007bff;
 }
