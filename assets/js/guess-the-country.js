@@ -73,7 +73,7 @@ function displayQuestion() {
     const currentQuestion = questionsArray[currentQuestionIndex];
 
     // Displaying the flag image
-    const flagImage = document.getElementById('GuessCountryImage');
+    const flagImage = document.getElementById('guessCountryImage');
     flagImage.src = currentQuestion.image;
 
     // Clearing the container with answer options
