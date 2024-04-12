@@ -365,17 +365,9 @@ main {
 }
 
 /* Media Queries for touch devices */
+/* Disable hover effect on touch devices */
 @media (hover: none) {
-
-    /* Remove hover effect for buttons */
-    .btn:hover {
-        background-color: transparent;
-        color: inherit;
-    }
-
-    /* Remove hover effect for options */
     .option-button:hover {
-        background-color: transparent;
-        color: inherit;
+        background-color: initial;
     }
 }
