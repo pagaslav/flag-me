@@ -113,7 +113,6 @@ main {
 /* Pseudo elements for icons */
 .btn:before {
     font-family: 'FontAwesome';
-    speak: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -306,6 +305,14 @@ main {
     outline: none;
     /* Blue shadow to clearly indicate focus */
     box-shadow: 0 0 0 3px #66afe9;
+}
+
+/* Reset styles for active state on buttons */
+.option-button:active {
+    background-color: #ffffff;
+    /* Reset background color */
+    color: #000000;
+    /* Reset text color */
 }
 
 /* Footer */
