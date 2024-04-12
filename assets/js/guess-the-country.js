@@ -14,6 +14,7 @@ function shuffleArray(array) {
         array[i] = array[j];
         array[j] = temp;
     }
+    return array;
 }
 
 // Generating an array of objects with the specified number of questions
@@ -62,7 +63,7 @@ let questionsArray = generateQuestionsArray(flagsDataArray, totalQuestions);
 // Now, questionsArray contains 12 objects with question data.
 
 // Getting a reference to the container for answer options
-const optionsContainer = document.getElementById('optionsContainer');
+const optionsContainer = document.getElementById('optionsCountryContainer');
 
 // Array to store results
 let resultsArray = [];
