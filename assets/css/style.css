@@ -362,6 +362,10 @@ main {
             width: auto;
         }
     }
+
+    .option-button:focus {
+        outline: none;
+    }
 }
 
 /* Media Queries for touch devices */
