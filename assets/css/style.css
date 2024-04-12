@@ -1,3 +1,4 @@
+/* General styles */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Luckiest+Guy&family=Schoolbell&family=Zilla+Slab+Highlight:wght@400;700&display=swap');
 
 /* Reset default margin, padding, and border for all elements */
@@ -240,11 +241,21 @@ main {
     max-width: 500px;
 }
 
+.options-flag-container {
+    /* Setting exactly 2 columns */
+    display: grid;
+    grid-template-columns: repeat(2, minmax(15rem, 1fr));
+    justify-content: center;
+    gap: 10px;
+}
+
 .flagImage-guess-flag {
-    width: 20rem;
-    margin: auto;
-    padding-top: 3em;
-    padding-bottom: 3em;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0.1em;
+    box-sizing: border-box;
     cursor: pointer;
 }
 
@@ -261,14 +272,13 @@ main {
 }
 
 /* Styles for the container with options */
-.options-container {
+.options-country-container {
     margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
     justify-content: center;
     gap: 10px;
 }
-
 
 /* Styles for individual option buttons */
 .option-button {
@@ -315,8 +325,8 @@ main {
 
 /* Media Queries */
 @media (min-width: 768px) {
-    .options-container {
-        /* Setting exactly 2 columns */
+
+    .options-country-container {
         grid-template-columns: repeat(2, minmax(15rem, 1fr));
     }
 }
@@ -333,4 +343,17 @@ main {
     .ImageContainer {
         padding: 0.5rem 0;
     }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+        .options-flag-container {
+            display: block;
+        }
+
+        .flagImage-guess-flag {
+            max-width: 300px;
+            width: auto;
+        }
+    }
+
 }
