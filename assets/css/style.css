@@ -19,6 +19,22 @@ main {
     margin-top: 8rem;
 }
 
+/* Styling for the logo text */
+#logo-font {
+    font-family: 'Luckiest Guy', sans-serif;
+    font-size: 48px;
+    color: #343a40;
+    padding-left: 23px;
+}
+
+/* Styling for the slogan text */
+#slogan-font {
+    font-family: 'Schoolbell', sans-serif;
+    font-size: 28px;
+}
+
+/* Index page */
+
 /* Styles for the container displaying a random quote */
 .quote-container {
     /* Center the container horizontally */
@@ -40,7 +56,6 @@ main {
     background-color: transparent;
     border: none;
 }
-
 
 /* Styles for the quote text */
 .quote {
@@ -208,20 +223,6 @@ main {
     content: "\f024";
 }
 
-/* Styling for the logo text */
-#logo-font {
-    font-family: 'Luckiest Guy', sans-serif;
-    font-size: 48px;
-    color: #343a40;
-    padding-left: 23px;
-}
-
-/* Styling for the slogan text */
-#slogan-font {
-    font-family: 'Schoolbell', sans-serif;
-    font-size: 28px;
-}
-
 /* Learn Page */
 .learnArrows {
     width: 30px;
@@ -231,11 +232,12 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem 0;
 }
 
 .flagImage {
-    /* border: 0.5px solid grey; */
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
 }
 
 .flagImage-guess-flag {
@@ -249,20 +251,52 @@ main {
 #description {
     font-family: 'Lato', sans-serif;
     font-size: 1.125rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin: 2rem;
 }
 
 /* Styles for the container with flags */
+#guessCountryImage {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Styles for the container with options */
 .options-container {
     margin-top: 20px;
-    flex-wrap: nowrap;
-    justify-content: center;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    justify-content: center;
     gap: 10px;
 }
 
+
+/* Styles for individual option buttons */
+.option-button {
+    height: 5rem;
+    margin: auto;
+    width: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #cccccc;
+    border-radius: 0.5rem;
+    /* Light shadow for 3D effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Smooth transition for hover effects */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for option buttons */
+.option-button:hover {
+    background-color: #e8e8e8;
+    cursor: pointer;
+}
+
+/* Focus styles for accessibility */
+.option-button:focus {
+    outline: none;
+    /* Blue shadow to clearly indicate focus */
+    box-shadow: 0 0 0 3px #66afe9;
+}
 
 /* Footer */
 .social-icons a {
@@ -277,4 +311,26 @@ main {
 
 .social-icons a:hover {
     color: #007bff;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .options-container {
+        /* Setting exactly 2 columns */
+        grid-template-columns: repeat(2, minmax(15rem, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .flagImage {
+        max-width: 400px;
+    }
+
+    #guessCountryImage {
+        max-width: 400px;
+    }
+
+    .ImageContainer {
+        padding: 0.5rem 0;
+    }
 }
