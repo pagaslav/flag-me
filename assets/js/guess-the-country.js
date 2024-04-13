@@ -84,7 +84,7 @@ function displayQuestion() {
     currentQuestion.options.forEach(option => {
         const button = document.createElement('button');
         button.textContent = option;
-        button.classList.add('btn', 'btn-primary', 'option-button');
+        button.classList.add('option-button');
         button.addEventListener('click', () => handleAnswer(option));
         optionsContainer.appendChild(button);
     });
