@@ -359,5 +359,22 @@ main {
             width: auto;
         }
     }
+}
 
+/* Enable hover effect for option buttons on desktop */
+@media (hover: hover) {
+
+    /* Hover effect for option buttons */
+    .option-button:hover {
+        background-color: #e8e8e8;
+        cursor: pointer;
+    }
+}
+
+/* Disable hover effect for option buttons on touch devices */
+@media (hover: none) {
+    .option-button:hover {
+        background-color: transparent;
+        cursor: pointer;
+    }
 }
