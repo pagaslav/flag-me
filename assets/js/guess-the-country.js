@@ -71,6 +71,10 @@ function displayQuestion() {
     // Getting the current question
     const currentQuestion = questionsArray[currentQuestionIndex];
 
+    // Displaying the question number
+    const questionNumberElement = document.querySelector('.question-number');
+    questionNumberElement.textContent = `Question ${currentQuestionIndex + 1} of ${totalQuestions}`;
+
     // Displaying the flag image
     const flagImage = document.getElementById('guessCountryImage');
     flagImage.src = currentQuestion.image;
