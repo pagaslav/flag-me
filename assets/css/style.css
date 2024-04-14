@@ -312,6 +312,25 @@ main {
     color: #000000;
 } */
 
+/* Styles for the score message */
+#score {
+    font-size: 1.4rem;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    color: red;
+    margin-bottom: 20px;
+}
+
+/* Styles for the result text */
+#resultText {
+    margin-top: 20px;
+    text-align: left;
+    font-family: "Lato", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #333;
+}
+
 /* Footer */
 .social-icons a {
     color: #495057;
