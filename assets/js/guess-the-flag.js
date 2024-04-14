@@ -113,7 +113,7 @@ function handleAnswer(option) {
         displayQuestion();
     } else {
         // If all questions are answered, redirecting to the results page
-        window.location.href = 'result.html';
+        window.location.href = "result.html?gameType=guessFlag";
     }
 }
 
