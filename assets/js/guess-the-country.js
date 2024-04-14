@@ -60,8 +60,6 @@ const totalQuestions = 12;
 // Creating an array of questions
 let questionsArray = generateQuestionsArray(flagsDataArray, totalQuestions);
 
-// Now, questionsArray contains 12 objects with question data.
-
 // Getting a reference to the container for answer options
 const optionsContainer = document.getElementById('optionsCountryContainer');
 
@@ -113,7 +111,7 @@ function handleAnswer(option) {
         displayQuestion();
     } else {
         // If all questions are answered, redirecting to the results page
-        window.location.href = 'result.html';
+        window.location.href = "result.html?gameType=guessCountry";
     }
 }
 
