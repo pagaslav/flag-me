@@ -1,6 +1,9 @@
 // Retrieve results from localStorage
 const resultsArray = JSON.parse(localStorage.getItem('resultsArray'));
 
+const urlParams = new URLSearchParams(window.location.search);
+const gameType = urlParams.get('gameType');
+
 // Calculate the total number of correct answers
 let totalCorrectAnswers = 0;
 for (let i = 0; i < resultsArray.length; i++) {
@@ -52,7 +55,34 @@ function addImagesAndText(totalCorrectAnswers) {
             <p>But remember, with great knowledge comes great responsibility. Keep exploring and stay humble!</p>
         `;
     }
+
+    // Add buttons for actions
+    resultTextContainer.innerHTML += `
+    <div class="text-center mt-4">
+        <button onclick="playAgain()" class="btn btn-primary btn-lg mb-2">Play Again</button>
+        <button onclick="goToMainPage()" class="btn btn-secondary btn-lg">Go to Main Page</button>
+    </div>
+`;
+
 }
 
 // Call the function to add images and result text
 addImagesAndText(totalCorrectAnswers);
+
+// Function to play the quiz again
+function playAgain() {
+    // Determine which game the user is currently playing
+    if (gameType === "guessCountry") {
+        // Redirect to guess-the-country.html
+        window.location.href = "guess-the-country.html";
+    } else if (gameType === "guessFlag") {
+        // Redirect to guess-the-flag.html
+        window.location.href = "guess-the-flag.html";
+    }
+}
+
+// Function to navigate to the main page
+function goToMainPage() {
+    // Redirect to the main page
+    window.location.href = "index.html";
+}
