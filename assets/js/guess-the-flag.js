@@ -66,10 +66,16 @@ const optionsContainer = document.getElementById('optionsFlagContainer');
 // Array to store results
 let resultsArray = [];
 
+
+
 // Function to display the question and answer options
 function displayQuestion() {
     // Getting the current question
     const currentQuestion = questionsArray[currentQuestionIndex];
+
+    // Displaying the question number
+    const questionNumberElement = document.querySelector('.question-number');
+    questionNumberElement.textContent = `Question ${currentQuestionIndex + 1} of ${totalQuestions}`;
 
     // Displaying the country name
     const countryName = document.getElementById('countryName');
