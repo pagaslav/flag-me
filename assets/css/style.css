@@ -318,6 +318,13 @@ main {
     margin-bottom: 20px;
 }
 
+/* CSS for responsive image with borders */
+#imageContainerResult img {
+    max-width: 100%;
+    height: auto;
+}
+
+
 /* Styles for the result text */
 #resultText {
     margin-top: 20px;
