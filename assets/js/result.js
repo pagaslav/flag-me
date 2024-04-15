@@ -59,8 +59,12 @@ function addImagesAndText(totalCorrectAnswers) {
     // Add links for actions
     resultTextContainer.innerHTML += `
     <div class="text-center mt-4">
-    <a href="index.html" class="result-link" aria-label="Go to Main Page"><i class="fas fa-home"></i></a>
-    <a href="#" onclick="playAgain()" class="result-link" aria-label="Play Again"><i class="fas fa-redo-alt"></i></a>
+    <a href="index.html" class="result-link" aria-label="Go to Home Page">
+        <i class="fas fa-home"></i> Home Page
+    </a>
+    <a href="#" onclick="playAgain()" class="result-link" aria-label="Play Again">
+        <i class="fas fa-redo-alt"></i> Play Again
+    </a>
 </div>
 `;
 }
