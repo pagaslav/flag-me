@@ -335,6 +335,11 @@ main {
     color: #333;
 }
 
+.result-link {
+    display: block;
+    margin-bottom: 10px;
+}
+
 /* Footer */
 .social-icons a {
     color: #495057;
