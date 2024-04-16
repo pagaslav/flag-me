@@ -12,7 +12,10 @@
 body {
     margin: 20px 20px;
     font-family: 'Lato', sans-serif;
-    background-color: #f5f5f5;
+    background-color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
@@ -131,6 +134,34 @@ main {
     background: rgba(0, 0, 0, 0.15);
 }
 
+/* Button INSTRUCTIONS */
+.btn-instructions {
+    background: #f1c40f;
+    color: #fff;
+}
+
+.btn-instructions:hover {
+    background: #d4ac0d;
+    color: #fff;
+}
+
+.btn-instructions:active {
+    background: #d4ac0d;
+    top: 2px;
+}
+
+.btn-instructions:before {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    line-height: 3;
+    font-size: 170%;
+    width: 60px;
+    color: #fff;
+}
+
+
 /* Button LEARN */
 .btn-learn {
     background: #3498db;
@@ -210,6 +241,51 @@ main {
     width: 60px;
 }
 
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /* Icons */
 .icon-info:before {
     content: "\f05a";
@@ -242,15 +318,17 @@ main {
 
 .options-flag-container {
     /* Setting exactly 2 columns */
-    display: grid;
-    grid-template-columns: repeat(2, minmax(15rem, 1fr));
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, minmax(15rem, 1fr)); */
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .flagImage-guess-flag {
     width: 100%;
-    max-width: 300px;
+    max-width: 200px;
     height: auto;
     margin: 0 auto;
     padding: 0.1em;
@@ -359,7 +437,8 @@ main {
 @media (min-width: 768px) {
 
     .options-country-container {
-        grid-template-columns: repeat(2, minmax(15rem, 1fr));
+        /* grid-template-columns: repeat(2, minmax(15rem, 1fr)); */
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
     }
 }
 
@@ -376,16 +455,16 @@ main {
         padding: 0.5rem 0;
     }
 
-    /* Media Queries */
-    @media (max-width: 768px) {
-        .options-flag-container {
-            display: block;
-        }
+    .options-flag-container {
+        display: block;
+    }
 
-        .flagImage-guess-flag {
-            max-width: 300px;
-            width: auto;
-        }
+    .flagImage-guess-flag {
+        max-width: 300px;
+        height: auto;
+        width: 100%;
+        margin: 20px;
+        box-sizing: border-box;
     }
 }
 
