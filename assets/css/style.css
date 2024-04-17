@@ -10,12 +10,11 @@
 
 /* Set margin and font styles for the entire body */
 body {
-    margin: 20px 20px;
-    font-family: 'Lato', sans-serif;
-    background-color: #e0e0e0;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Lato', sans-serif;
+    background-color: #e0e0e0;
 }
 
 main {
@@ -410,6 +409,7 @@ main {
 }
 
 /* Footer */
+
 .social-icons a {
     color: #495057;
     margin-right: 15px;
