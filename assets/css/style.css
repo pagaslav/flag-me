@@ -476,7 +476,7 @@ main {
 @media (hover: none) {
     .option-button:hover {
         background-color: transparent;
-        cursor: pointer;
+        cursor: auto;
     }
 }
 
