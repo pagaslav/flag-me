@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('a:not([onclick="playAgain()"])').forEach(link => {
         link.addEventListener('click', function (event) {
             event.preventDefault();
-            if (confirm("Are you sure you want to navigate away from this page?")) {
+            if (confirm("Are you sure you want to leave this page?")) {
                 window.location.href = this.getAttribute('href');
             }
         });
