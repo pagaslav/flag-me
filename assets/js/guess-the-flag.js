@@ -19,19 +19,22 @@ function generateQuestionsArray(flagsDataArray, totalQuestions) {
     shuffleArray(flagsDataArray);
 
     for (let i = 0; i < totalQuestions; i++) {
-        const flag = flagsDataArray[i];
+        const correctFlag = flagsDataArray[i];
         const question = {
-            image: flag.image,
-            correctAnswer: flag.country,
-            options: []
+            image: correctFlag.image,
+            correctAnswer: correctFlag.country,
+            options: [correctFlag] // Start with the correct flag
         };
 
+        // Ensure four unique flags including the correct one
         while (question.options.length < 4) {
             const randomFlag = getRandomElement(flagsDataArray);
             if (!question.options.some(option => option.country === randomFlag.country)) {
                 question.options.push(randomFlag);
             }
         }
+
+        // Shuffle the options to randomize their positions
         shuffleArray(question.options);
         questionsArray.push(question);
     }
@@ -45,8 +48,8 @@ let resultsArray = [];
 
 function displayQuestion() {
     const currentQuestion = questionsArray[currentQuestionIndex];
-    const questionNumberElement = document.querySelector('.question-number');
-    questionNumberElement.textContent = `Question ${currentQuestionIndex + 1} of ${totalQuestions}`;
+    document.querySelector('.question-number').textContent = `Question ${currentQuestionIndex + 1} of ${totalQuestions}`;
+    document.getElementById('countryName').textContent = currentQuestion.correctAnswer; // Display the name of the country
 
     const optionsContainer = document.getElementById('optionsFlagContainer');
     optionsContainer.innerHTML = '';
