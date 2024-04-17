@@ -324,30 +324,6 @@ main {
     gap: 20px;
 }
 
-.flagImage-guess-flag {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    margin: 0 auto;
-    padding: 0.1em;
-    box-sizing: border-box;
-    cursor: pointer;
-}
-
-#description {
-    font-family: 'Lato', sans-serif;
-    font-size: 1.125rem;
-    margin: 2rem;
-}
-
-/* Styles for the container with flags */
-#guessCountryImage {
-    /* width: 100%;
-    max-width: 500px;
-    height: 20rem; */
-    width: 100%;
-    height: 30vw;
-}
 
 /* Styles for the container with options */
 .options-country-container {
@@ -387,6 +363,28 @@ main {
     font-weight: bold;
     color: red;
     margin-bottom: 20px;
+}
+
+.flagImage-guess-flag {
+    width: auto;
+    /* max-width: 200px; */
+    height: 12vw;
+    /* margin: 0 auto;
+    padding: 0.1em; */
+    /* box-sizing: border-box; */
+    cursor: pointer;
+}
+
+#description {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.125rem;
+    margin: 2rem;
+}
+
+/* Styles for the container with flags */
+#guessCountryImage {
+    width: auto;
+    height: 30vw;
 }
 
 /* CSS for responsive image with borders */
@@ -441,7 +439,6 @@ main {
     }
 
     #guessCountryImage {
-        /* max-width: 400px; */
         height: 40vw;
     }
 
