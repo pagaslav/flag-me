@@ -489,8 +489,8 @@ main {
 @media (hover: hover) {
 
     /* Hover effect for option buttons */
-    .option-button:hover {
+    /* .option-button:hover {
         background-color: #e8e8e8;
         cursor: pointer;
-    }
+    } */
 }
