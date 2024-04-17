@@ -373,15 +373,15 @@ main {
     /* Light shadow for 3D effect */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     /* Smooth transition for hover effects */
-    transition: background-color 0.3s ease;
+    /* transition: background-color 0.3s ease; */
 }
 
 /* Hover effect for option buttons */
-.option-button:hover {
-    background-color: #ffffff;
-    /* background-color: #e8e8e8; */
-    cursor: pointer;
-}
+/* .option-button:hover {
+    background-color: #ffffff; */
+/* background-color: #e8e8e8; */
+/* cursor: pointer;
+} */
 
 /* Styles for question number */
 .question-number {
