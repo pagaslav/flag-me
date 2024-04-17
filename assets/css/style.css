@@ -471,10 +471,10 @@ main {
         box-sizing: border-box;
     }
 
-    .option-button:hover {
+    /* .option-button:hover {
         background-color: transparent;
         cursor: auto;
-    }
+    } */
 }
 
 /* Disable hover effect for option buttons on touch devices */
