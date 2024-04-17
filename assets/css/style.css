@@ -480,8 +480,8 @@ main {
 /* Disable hover effect for option buttons on touch devices */
 @media (hover: none) {
     .option-button:hover {
-        background-color: transparent;
-        cursor: default;
+        background-color: transparent !important;
+        cursor: default !important;
     }
 }
 
