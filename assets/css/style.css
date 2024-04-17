@@ -265,11 +265,9 @@ main {
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
-    /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    /* Could be more or less, depending on screen size */
 }
 
 .close {
@@ -321,9 +319,6 @@ main {
 }
 
 .options-flag-container {
-    /* Setting exactly 2 columns */
-    /* display: grid; */
-    /* grid-template-columns: repeat(2, minmax(15rem, 1fr)); */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -460,13 +455,5 @@ main {
         width: 100%;
         margin: 20px;
         box-sizing: border-box;
-    }
-}
-
-@media (hover: hover),
-(hover: none) {
-    .option-button:hover {
-        background-color: transparent;
-        cursor: default;
     }
 }
