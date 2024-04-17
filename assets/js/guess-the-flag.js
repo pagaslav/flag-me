@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
             event.preventDefault();
             if (link.getAttribute('onclick') === 'playAgain()') {
                 playAgain();
-            } else if (confirm("Are you sure you want to navigate away from this page?")) {
+            } else if (confirm("Are you sure you want to leave this page?")) {
                 window.location.href = this.getAttribute('href');
             }
         });
