@@ -470,6 +470,11 @@ main {
         margin: 20px;
         box-sizing: border-box;
     }
+
+    .option-button:hover {
+        background-color: transparent;
+        cursor: auto;
+    }
 }
 
 /* Disable hover effect for option buttons on touch devices */
