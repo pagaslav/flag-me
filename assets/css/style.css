@@ -291,11 +291,15 @@ main {
     content: "\f05a";
 }
 
-.icon-cart:before {
+.icon-learn:before {
+    content: "\f19d";
+}
+
+.icon-country:before {
     content: "\f7a2";
 }
 
-.icon-heart:before {
+.icon-flag:before {
     content: "\f024";
 }
 
