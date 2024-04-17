@@ -462,3 +462,11 @@ main {
         box-sizing: border-box;
     }
 }
+
+@media (hover: hover),
+(hover: none) {
+    .option-button:hover {
+        background-color: transparent;
+        cursor: default;
+    }
+}
