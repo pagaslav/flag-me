@@ -430,7 +430,7 @@ main {
     }
 
     #guessCountryImage {
-        height: 12vw;
+        height: 250px;
     }
 
     .ImageContainer {
@@ -447,5 +447,16 @@ main {
         width: 100%;
         margin: 20px;
         box-sizing: border-box;
+    }
+}
+
+@media (max-width: 400px) {
+
+    #guessCountryImage {
+        height: 150px;
+    }
+
+    .option-button {
+        height: 4rem;
     }
 }
