@@ -56,6 +56,7 @@
                         Discover flags, unlock knowledge
                     </h1>
                 </div>
+
                 <!-- Navigation toggler button -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"
@@ -110,8 +111,8 @@
             <button class="fas fa-plus-circle font-icon" aria-label="Increase Font Size"></button>
             <!-- Font Awesome icon button for decreasing font size -->
             <button class="fas fa-minus-circle font-icon" aria-label="Decrease Font Size"></button>
+            <!-- Font Awesome icon button for refreshing a quote -->
             <button id="refreshQuote" class="fas fa-sync-alt font-icon" aria-label="Refresh Quote"></button>
-
 
             <!-- Paragraph element to display the random quote, dynamically filled by JavaScript -->
             <p id="randomQuote" class="quote"></p>
@@ -119,16 +120,15 @@
 
         <!-- Container for vertically centering buttons -->
         <div class="d-flex flex-column justify-content-center align-items-center">
-            <button class="btn btn-instructions btn-sep icon-info" onclick="location.href='#';"
-                aria-label="Read instructions">instructions</button>
-            <button class="btn btn-learn btn-sep icon-learn" onclick="location.href='learn.html';"
-                aria-label="Go to Learn Page">learn</button>
-            <button class="btn btn-guess-country btn-sep icon-country" onclick="location.href='guess-the-country.html';"
-                aria-label="Go to Guess the Country Page">Guess the Country</button>
-            <button class="btn btn-guess-flag btn-sep icon-flag" onclick="location.href='guess-the-flag.html';"
-                aria-label="Go to Guess the Flag Page">Guess the Flag</button>
+            <a href="#" class="btn btn-instructions btn-sep icon-info" role="button"
+                aria-label="Read instructions">Instructions</a>
+            <a href="learn.html" class="btn btn-learn btn-sep icon-learn" role="button"
+                aria-label="Go to Learn Page">Learn</a>
+            <a href="guess-the-country.html" class="btn btn-guess-country btn-sep icon-country" role="button"
+                aria-label="Go to Guess the Country Page">Guess the Country</a>
+            <a href="guess-the-flag.html" class="btn btn-guess-flag btn-sep icon-flag" role="button"
+                aria-label="Go to Guess the Flag Page">Guess the Flag</a>
         </div>
-
     </main>
 
     <!-- Footer section -->
