@@ -39,16 +39,17 @@
 
 
 <body>
+
     <!-- Header section -->
     <header>
+
         <!-- Main navigation section -->
         <nav class="navbar bg-body-tertiary fixed-top" aria-label="Main Navigation">
             <div class="container-fluid">
-
                 <div class="d-flex align-items-center">
 
                     <!-- Brand logo -->
-                    <a id="logo-font" class="navbar-brand" href="index.html">
+                    <a id="logo-font" class="navbar-brand" href="index.html" aria-label="Go to the home page">
                         Flag Me
                     </a>
 
@@ -71,7 +72,7 @@
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Flag me</h5>
+                        <p class="offcanvas-title" id="offcanvasNavbarLabel">Flag me</p>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
@@ -79,19 +80,23 @@
                         <!-- Main menu -->
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" aria-label="Main Menu">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                                <a class="nav-link" aria-current="page" href="index.html"
+                                    aria-label="Return to the homepage">Home</a>
+
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="learn.html">Learn</a>
+                                <a class="nav-link" href="learn.html" aria-label="Learn about flags">Learn</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="guess-the-country.html">Guess the country</a>
+                                <a class="nav-link" href="guess-the-country.html"
+                                    aria-label="Play the Guess the Country game">Guess the country</a>
+
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="guess-the-flag.html">Guess the flag</a>
+                                <a class="nav-link active" href="guess-the-flag.html"
+                                    aria-label="Play the Guess the Flag game">Guess the flag</a>
+
                             </li>
-                        </ul>
-                        </li>
                         </ul>
                     </div>
                 </div>
