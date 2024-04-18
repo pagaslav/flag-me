@@ -22,18 +22,34 @@ main {
     margin-top: 8rem;
 }
 
+/* Typography */
 /* Styling for the logo text */
 #logo-font {
     font-family: 'Luckiest Guy', sans-serif;
     font-size: 48px;
     color: #343a40;
-    padding-left: 23px;
+    padding-left: 20px;
 }
 
 /* Styling for the slogan text */
 #slogan-font {
     font-family: 'Schoolbell', sans-serif;
     font-size: 28px;
+}
+
+/* Footer */
+.social-icons a {
+    color: #495057;
+    margin-right: 15px;
+}
+
+.social-icons a .fab {
+    font-size: 2em;
+    vertical-align: middle;
+}
+
+.social-icons a:hover {
+    color: #007bff;
 }
 
 /* Index page */
@@ -231,6 +247,24 @@ main {
     width: 60px;
 }
 
+/* Icons */
+.icon-info:before {
+    content: "\f05a";
+}
+
+.icon-learn:before {
+    content: "\f19d";
+}
+
+.icon-country:before {
+    content: "\f7a2";
+}
+
+.icon-flag:before {
+    content: "\f024";
+}
+
+
 .modal {
     display: none;
     position: fixed;
@@ -266,23 +300,6 @@ main {
     color: black;
     text-decoration: none;
     cursor: pointer;
-}
-
-/* Icons */
-.icon-info:before {
-    content: "\f05a";
-}
-
-.icon-learn:before {
-    content: "\f19d";
-}
-
-.icon-country:before {
-    content: "\f7a2";
-}
-
-.icon-flag:before {
-    content: "\f024";
 }
 
 /* Learn Page */
@@ -361,14 +378,11 @@ main {
 /* Styles for the container with flags */
 .flagImage-guess-flag {
     width: auto;
-    /* max-width: 200px; */
     height: 12vw;
-    /* margin: 0 auto;
-    padding: 0.1em; */
-    /* box-sizing: border-box; */
     cursor: pointer;
 }
 
+/* Result Page */
 /* Styles for the score message */
 #score {
     font-size: 1.4rem;
@@ -383,7 +397,6 @@ main {
     max-width: 100%;
     height: auto;
 }
-
 
 /* Styles for the result text */
 #resultText {
@@ -400,25 +413,8 @@ main {
     margin-bottom: 10px;
 }
 
-/* Footer */
-
-.social-icons a {
-    color: #495057;
-    margin-right: 15px;
-}
-
-.social-icons a .fab {
-    font-size: 2em;
-    vertical-align: middle;
-}
-
-.social-icons a:hover {
-    color: #007bff;
-}
-
 /* Media Queries */
 @media (min-width: 768px) {
-
     .options-country-container {
         grid-template-columns: repeat(2, minmax(15rem, 1fr));
     }
@@ -451,7 +447,6 @@ main {
 }
 
 @media (max-width: 400px) {
-
     #guessCountryImage {
         height: 150px;
     }
