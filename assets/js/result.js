@@ -91,11 +91,3 @@ function playAgain() {
         window.location.href = "guess-the-flag.html";
     }
 }
-
-/**
- * Function to redirect to the main page.
- */
-function goToMainPage() {
-    // Redirect to the main page
-    window.location.href = "index.html";
-}
