@@ -1,12 +1,25 @@
+/* jshint esversion: 11 */
+
 // Importing the array of flag data
 import flagsDataArray from './flags-data.js';
 
 let gameType = "guessFlag"; // Set based on the page type
 
+/**
+ * Function to get a random element from an array.
+ * 
+ * @param {Array} array - The array from which to select a random element.
+ * @returns {*} - A randomly selected element from the array.
+ */
 function getRandomElement(array) {
     return array[Math.floor(Math.random() * array.length)];
 }
 
+/**
+ * Function to shuffle the elements of an array in place.
+ * 
+ * @param {Array} array - The array to be shuffled.
+ */
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -14,6 +27,13 @@ function shuffleArray(array) {
     }
 }
 
+/**
+ * Function to generate an array of questions for a quiz.
+ * 
+ * @param {Array} flagsDataArray - An array containing data for flags.
+ * @param {number} totalQuestions - The total number of questions to generate.
+ * @returns {Array} - An array of question objects for the quiz.
+ */
 function generateQuestionsArray(flagsDataArray, totalQuestions) {
     let questionsArray = [];
     shuffleArray(flagsDataArray);
@@ -46,6 +66,9 @@ let questionsArray = generateQuestionsArray(flagsDataArray, totalQuestions);
 let currentQuestionIndex = 0;
 let resultsArray = [];
 
+/**
+ * Function to display the current question in the quiz.
+ */
 function displayQuestion() {
     const currentQuestion = questionsArray[currentQuestionIndex];
     document.querySelector('.question-number').textContent = `Question ${currentQuestionIndex + 1} of ${totalQuestions}`;
@@ -64,6 +87,11 @@ function displayQuestion() {
     });
 }
 
+/**
+ * Function to handle the user's answer to the current question.
+ * 
+ * @param {string} option - The option selected by the user.
+ */
 function handleAnswer(option) {
     const correctAnswer = questionsArray[currentQuestionIndex].correctAnswer;
     const isCorrect = option === correctAnswer ? 1 : 0;
@@ -78,12 +106,18 @@ function handleAnswer(option) {
     }
 }
 
+/**
+ * Function to initiate playing the game again.
+ */
 function playAgain() {
     if (confirm("Are you sure you want to start the game again?")) {
         window.location.href = gameType === "guessFlag" ? "guess-the-flag.html" : "guess-the-country.html";
     }
 }
 
+/**
+ * Event listener for when the DOM content is loaded.
+ */
 document.addEventListener("DOMContentLoaded", function () {
     displayQuestion();
     document.querySelectorAll('a').forEach(link => {

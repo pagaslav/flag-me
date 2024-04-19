@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+
 // Retrieve results from localStorage
 const resultsArray = JSON.parse(localStorage.getItem('resultsArray'));
 
@@ -20,7 +22,11 @@ const scoreMessage = `Your score: ${totalCorrectAnswers} out of ${totalQuestions
 const scoreElement = document.getElementById('score');
 scoreElement.textContent = scoreMessage;
 
-// Function to add images and result text based on the total correct answers
+/**
+ * Function to add images and text based on the total correct answers.
+ * 
+ * @param {number} totalCorrectAnswers - The total number of correct answers.
+ */
 function addImagesAndText(totalCorrectAnswers) {
     const imageContainer = document.getElementById('imageContainerResult');
     const resultTextContainer = document.getElementById('resultText');
@@ -72,7 +78,9 @@ function addImagesAndText(totalCorrectAnswers) {
 // Call the function to add images and result text
 addImagesAndText(totalCorrectAnswers);
 
-// Function to play the quiz again
+/**
+ * Function to initiate playing the game again based on the current game type.
+ */
 function playAgain() {
     // Determine which game the user is currently playing
     if (gameType === "guessCountry") {
@@ -84,7 +92,9 @@ function playAgain() {
     }
 }
 
-// Function to navigate to the main page
+/**
+ * Function to redirect to the main page.
+ */
 function goToMainPage() {
     // Redirect to the main page
     window.location.href = "index.html";

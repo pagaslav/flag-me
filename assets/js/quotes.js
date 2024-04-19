@@ -1,4 +1,8 @@
-// Array containing quotes
+/* jshint esversion: 11 */
+
+/**
+ * Array containing quotes
+ */
 const quotes = [{
         text: "A thoughtful mind, when it sees a nation's flag, sees not the flag, but the nation itself.",
         author: "<a href='https://en.wikipedia.org/wiki/Henry_Ward_Beecher' target='_blank'>Henry Ward Beecher</a>"
@@ -89,12 +93,16 @@ const quotes = [{
     }
 ];
 
-// Function to get a random quote
+/**
+ * Function to get a random quote
+ */
 function getRandomQuote() {
     return quotes[Math.floor(Math.random() * quotes.length)];
 }
 
-// Function to display a random quote on the page
+/**
+ * Function to display a random quote on the page
+ */
 function displayRandomQuote() {
     const randomQuote = getRandomQuote();
     const quoteElement = document.getElementById("randomQuote");
@@ -102,7 +110,9 @@ function displayRandomQuote() {
     quoteElement.innerHTML = `<em>"${randomQuote.text}"</em> - ${randomQuote.author}`;
 }
 
-// Font size adjustment functions
+/**
+ * Function to increase the font size of the quote element.
+ */
 function increaseFontSize() {
     const quoteElement = document.getElementById("randomQuote");
     const currentFontSize = window.getComputedStyle(quoteElement).fontSize;
@@ -110,6 +120,9 @@ function increaseFontSize() {
     quoteElement.style.fontSize = (currentFontSizeValue + 2) + 'px';
 }
 
+/**
+ * Function to decrease the font size of the quote element.
+ */
 function decreaseFontSize() {
     const quoteElement = document.getElementById("randomQuote");
     const currentFontSize = window.getComputedStyle(quoteElement).fontSize;
@@ -117,10 +130,14 @@ function decreaseFontSize() {
     quoteElement.style.fontSize = (currentFontSizeValue - 2) + 'px';
 }
 
-// Event listener for refreshing the quote
+/**
+ * Event listener for refreshing the quote
+ */
 document.getElementById('refreshQuote').addEventListener('click', displayRandomQuote);
 
-// Event listener for when the DOM content is loaded
+/**
+ * Event listener for when the DOM content is loaded
+ */
 document.addEventListener("DOMContentLoaded", function () {
     // Call the function to display a random quote when the page loads
     displayRandomQuote();
@@ -131,13 +148,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Get the modal
-var modal = document.getElementById('instructionsModal');
+const modal = document.getElementById('instructionsModal');
 
 // Get the button that opens the modal
-var btn = document.querySelector('.btn-instructions');
+const btn = document.querySelector('.btn-instructions');
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+const span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
 btn.onclick = function () {
