@@ -1,12 +1,26 @@
+/* jshint esversion: 11 */
+
 // Importing the array of flag data
 import flagsDataArray from './flags-data.js';
 
-let gameType = "guessCountry"; // Set based on the page type
+// Set based on the page type
+let gameType = "guessCountry";
 
+/**
+ * Function to get a random element from an array.
+ * 
+ * @param {Array} array 
+ * @returns{*} - A randomly selected element from the array.
+ */
 function getRandomElement(array) {
     return array[Math.floor(Math.random() * array.length)];
 }
 
+/**
+ * Function to shuffle the elements of an array in place.
+ * 
+ * @param {Array} array - The array to be shuffled.
+ */
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -14,6 +28,13 @@ function shuffleArray(array) {
     }
 }
 
+/**
+ * Function to generate an array of questions for a quiz.
+ * 
+ * @param {Array} flagsDataArray - An array containing data for flags.
+ * @param {number} totalQuestions - The total number of questions to generate.
+ * @returns {Array} - An array of question objects for the quiz.
+ */
 function generateQuestionsArray(flagsDataArray, totalQuestions) {
     let questionsArray = [];
     shuffleArray(flagsDataArray);
@@ -43,6 +64,9 @@ let questionsArray = generateQuestionsArray(flagsDataArray, totalQuestions);
 let currentQuestionIndex = 0;
 let resultsArray = [];
 
+/**
+ * Function to display the current question in the quiz.
+ */
 function displayQuestion() {
     const currentQuestion = questionsArray[currentQuestionIndex];
     document.querySelector('.question-number').textContent = `Question ${currentQuestionIndex + 1} of ${totalQuestions}`;
@@ -60,6 +84,11 @@ function displayQuestion() {
     });
 }
 
+/**
+ * Function to handle the user's answer to the current question.
+ * 
+ * @param {string} option - The option selected by the user.
+ */
 function handleAnswer(option) {
     const correctAnswer = questionsArray[currentQuestionIndex].correctAnswer;
     const isCorrect = option === correctAnswer ? 1 : 0;
@@ -74,6 +103,11 @@ function handleAnswer(option) {
     }
 }
 
+/**
+ * Function to initiate playing the quiz again.
+ * 
+ * @param {Event} event - The event object.
+ */
 function playAgain(event) {
     event.preventDefault(); // Stop the link from triggering its default behavior
     if (confirm("Are you sure you want to play again?")) {
@@ -81,12 +115,17 @@ function playAgain(event) {
     }
 }
 
+/**
+ * Event listener for when the DOM content is loaded.
+ */
 document.addEventListener("DOMContentLoaded", function () {
     displayQuestion();
 
     // Attaching the event listener directly to the Play Again link
     const playAgainLink = document.querySelector('a[onclick="playAgain()"]');
-    playAgainLink.onclick = playAgain; // Assign the playAgain function directly to the onclick event
+
+    // Assign the playAgain function directly to the onclick event
+    playAgainLink.onclick = playAgain;
 
     // Universal link handler, modified to ignore the Play Again link
     document.querySelectorAll('a:not([onclick="playAgain()"])').forEach(link => {
