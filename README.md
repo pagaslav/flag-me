@@ -752,3 +752,13 @@ repository:
 excellent style framework. Their toolkit not only accelerates the
 development process but also empowers beginners to exceed their own
 capabilities.
+
+## Future Improvements
+
+1. **Add more flags:** Expand the collection of flags to include more countries.
+2. **Enhance interactivity:** Incorporate sound effects when buttons are clicked.
+3. **Visual feedback in games:** Implement highlighting of incorrect answers in red and correct answers in green to provide immediate feedback to the user during gameplay.
+4. **Review of incorrect answers:** Provide a link on the results page where users can review the questions they answered incorrectly and practice those specific flags or country associations.
+5. **Voice narration:** Introduce voice narration for text content and flag descriptions on the learning page to enhance accessibility and cater to users with different needs.
+6. **Include historical context:** Add information about the history and symbolism of flags, explaining the meaning behind their colors and symbols.
+7. **Difficulty levels:** Introduce a feature to allow users to select the difficulty level before starting the game, offering options such as easy, medium, and hard.
