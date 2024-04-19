@@ -24,20 +24,20 @@ function showFlag(index) {
 }
 
 /**
- * Function to display the next flag
- */
-function showNextFlag() {
-    // Increment index and loop back to beginning if needed
-    currentIndex = (currentIndex + 1) % flagsDataArray.length;
-    showFlag(currentIndex);
-}
-
-/**
  * Function to display the previous flag
  */
 function showPreviousFlag() {
     // Decrement index and loop back to end if needed
     currentIndex = (currentIndex - 1 + flagsDataArray.length) % flagsDataArray.length;
+    showFlag(currentIndex);
+}
+
+/**
+ * Function to display the next flag
+ */
+function showNextFlag() {
+    // Increment index and loop back to beginning if needed
+    currentIndex = (currentIndex + 1) % flagsDataArray.length;
     showFlag(currentIndex);
 }
 
