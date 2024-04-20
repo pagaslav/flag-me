@@ -102,7 +102,7 @@ This color scheme is designed to support usability while also making the website
 
 ### Typography
 
-![fonts.jpg](Flag%20me%20README%20f39e5b2f1e4b4f84b6e29669cd9d30ad/fonts.jpg)
+![fonts.jpg](documentation/fonts.jpg)
 
 #### Logo Font - Luckiest Guy
 
@@ -383,31 +383,31 @@ different users. The website was checked by extension
 
 Screen sizes
 
-![Screen sizes](documentation/Responsiveness/sizes-respons.jpg)
+![Screen sizes](documentation/responsiveness/sizes-respons.jpg)
 
 - **Home page**
 
-![Home page](documentation/Responsiveness/home-page-respons.jpg)
+![Home page](documentation/responsiveness/home-page-respons.jpg)
 
 - **Home page with the Instruction window**
 
-![Home page with the Instruction window](documentation/Responsiveness/home-page-instructions-respons.jpg)
+![Home page with the Instruction window](documentation/responsiveness/home-page-instructions-respons.jpg)
 
 - **Learn page**
     
-    ![Learn page](documentation/Responsiveness/learn-page-respons.jpg)
+    ![Learn page](documentation/responsiveness/learn-page-respons.jpg)
 
 - **Guess the country page**
 
-![Guess the country page](documentation/Responsiveness/guess-the-country-respons.jpg)
+![Guess the country page](documentation/responsiveness/guess-the-country-respons.jpg)
 
 - **Guess the flag page**
     
-    ![Guess the flag page](documentation/Responsiveness/guess-the-flag-respons.jpg)
+    ![Guess the flag page](documentation/responsiveness/guess-the-flag-respons.jpg)
 
 - **Result page**
 
-![Result page](documentation/Responsiveness/result-page-respons.jpg)
+![Result page](documentation/responsiveness/result-page-respons.jpg)
 
 ### Validator testing
 
@@ -700,6 +700,8 @@ tracking and resolution.
 - In future projects, I commit to maintaining a detailed log of
 encountered bugs and their resolution steps throughout the development
 process.
+- Initially, I attempted to implement automated tests using Jest. However, I realized that it would require much more time than I have left before the project deadline (which is tomorrow!). Therefore, I have decided to postpone this feature to my future projects.
+![automated tests](documentation/auto-testing.png)
 
 ## Deployment
 
@@ -729,9 +731,7 @@ repository:
 
 1. **Flag’s images:**
     
-    I took flag images from an open source on GitHub and the link is
-    
-    [https://github.com/IuliiaKonovalova/frontend-mentor-rest-countries-api/tree/master/assets/images/flags](https://github.com/IuliiaKonovalova/frontend-mentor-rest-countries-api/tree/master/assets/images/flags)
+    I took flag images from [Flagpedia.net](https://flagpedia.net/)
     
 2. **General Information:**
     - Additional information about countries is
