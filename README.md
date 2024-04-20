@@ -214,7 +214,7 @@ The footer of the website is elegantly designed to provide useful links and conn
 - **Instagram**: [Follow us in ](https://instagram.com/)
 - **Facebook**: [Like our page](https://facebook.com/)
 - **Twitter**: [Tweet with us](https://twitter.com/)
-- **YouTube**: [Subscribe to our channel](https://youtube.
+- **YouTube**: [Subscribe to our channel](https://youtube.com/)
   
 - **Copyright Information:** The footer prominently features the copyright notice "Copyright: 2024 Artem Bryzh. All rights reserved." This not only protects the intellectual property but also establishes trust by clearly identifying the website's owner.
   
@@ -360,12 +360,12 @@ consistent styling across the pages.
 - [VSCode](https://code.visualstudio.com/) was used as the main tool to write and edit code.
 - [Git](https://git-scm.com/) was used for the version control of the website.
 - [GitHub](https://github.com/) was used to host the code of the website.
+- [GitHub Pages](https://pages.github.com/) was used for hosting the deployed front-end site.
 - [Balsamiq](https://balsamiq.com/) was used to make wireframes for the website.
 - [Adobe Photoshop](https://www.adobe.com/uk/products/photoshop.html) was used to make and resize images for the website and the
 README file.
 - [ICO Converter](https://www.icoconverter.com/) - for the favicon.
-- [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) - to test responsiveness and generate Lighthouse
-reports.
+- [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) - was used to debug, to test responsiveness and generate Lighthouse reports.
 - [Google Fonts](https://fonts.google.com/) - to import the site font.
 - [Font Awesome](https://fontawesome.com/) - for all the site icons.
 - [W3C HTML Validator](https://validator.w3.org/) - to test HTML code.
@@ -438,8 +438,6 @@ The validator flagged an error on the learning page stating that the image eleme
 Similarly, the "Guess the Country" game page has the same issue flagged by the validator regarding the image element having an empty 'src' attribute. This is also not a concern in practice because JavaScript dynamically fills in these attributes during gameplay. This ensures the images are correctly displayed when needed, as the game interacts with user inputs to load and display the corresponding flag images.
 
 ![Guess the country page w3c testing 1](documentation/html-css-validator/guess-country-1-m-expl.jpg)
-
-![https://www.notion.sodocumentation/w3c/w3c-html-ukr-bread.jpg](https://www.notion.sodocumentation/w3c/w3c-html-ukr-bread.jpg)
 
 - **Guess the flag page**
     
