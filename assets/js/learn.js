@@ -5,8 +5,8 @@ import flagsDataArray from './flags-data.js';
 
 // Variables
 let currentIndex = Math.floor(Math.random() * 99); // Index of the current flag
-const prevArrow = document.getElementById('learnArrowsPrev');
-const nextArrow = document.getElementById('learnArrowsNext');
+const prevArrow = document.getElementById('learn-arrows-prev');
+const nextArrow = document.getElementById('learn-arrows-next');
 
 /**
  * Function to display information about a flag.
@@ -15,10 +15,10 @@ const nextArrow = document.getElementById('learnArrowsNext');
  */
 function showFlag(index) {
     let flagData = flagsDataArray[index];
-    let flagImage = document.getElementById("flagImageLearn");
+    let flagImage = document.getElementById("flag-image-learn");
     flagImage.src = flagData.image;
     flagImage.alt = "Flag of " + flagData.country;
-    document.getElementById("flagImageLearn").src = flagsDataArray[index].image;
+    document.getElementById("flag-image-learn").src = flagsDataArray[index].image;
     document.getElementById("country").innerText = flagData.country;
     document.getElementById("description").innerText = flagData.description;
 }

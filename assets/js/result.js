@@ -28,8 +28,8 @@ scoreElement.textContent = scoreMessage;
  * @param {number} totalCorrectAnswers - The total number of correct answers.
  */
 function addImagesAndText(totalCorrectAnswers) {
-    const imageContainer = document.getElementById('imageContainerResult');
-    const resultTextContainer = document.getElementById('resultText');
+    const imageContainer = document.getElementById('image-container-result');
+    const resultTextContainer = document.getElementById('result-text');
 
     // Add image and text based on the total correct answers
     if (totalCorrectAnswers < 4) {

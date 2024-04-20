@@ -105,7 +105,7 @@ function getRandomQuote() {
  */
 function displayRandomQuote() {
     const randomQuote = getRandomQuote();
-    const quoteElement = document.getElementById("randomQuote");
+    const quoteElement = document.getElementById("random-quote");
     // Use template literals to format the quote and author dynamically
     quoteElement.innerHTML = `<em>"${randomQuote.text}"</em> - ${randomQuote.author}`;
 }
@@ -114,7 +114,7 @@ function displayRandomQuote() {
  * Function to increase the font size of the quote element.
  */
 function increaseFontSize() {
-    const quoteElement = document.getElementById("randomQuote");
+    const quoteElement = document.getElementById("random-quote");
     const currentFontSize = window.getComputedStyle(quoteElement).fontSize;
     const currentFontSizeValue = parseFloat(currentFontSize);
     quoteElement.style.fontSize = (currentFontSizeValue + 2) + 'px';
@@ -124,7 +124,7 @@ function increaseFontSize() {
  * Function to decrease the font size of the quote element.
  */
 function decreaseFontSize() {
-    const quoteElement = document.getElementById("randomQuote");
+    const quoteElement = document.getElementById("random-quote");
     const currentFontSize = window.getComputedStyle(quoteElement).fontSize;
     const currentFontSizeValue = parseFloat(currentFontSize);
     quoteElement.style.fontSize = (currentFontSizeValue - 2) + 'px';
@@ -133,7 +133,7 @@ function decreaseFontSize() {
 /**
  * Event listener for refreshing the quote
  */
-document.getElementById('refreshQuote').addEventListener('click', displayRandomQuote);
+document.getElementById('refresh-quote').addEventListener('click', displayRandomQuote);
 
 /**
  * Event listener for when the DOM content is loaded
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Get the modal
-const modal = document.getElementById('instructionsModal');
+const modal = document.getElementById('instructions-modal');
 
 // Get the button that opens the modal
 const btn = document.querySelector('.btn-instructions');
