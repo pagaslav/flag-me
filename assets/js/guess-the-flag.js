@@ -72,16 +72,16 @@ let resultsArray = [];
 function displayQuestion() {
     const currentQuestion = questionsArray[currentQuestionIndex];
     document.querySelector('.question-number').textContent = `Question ${currentQuestionIndex + 1} of ${totalQuestions}`;
-    document.getElementById('countryName').textContent = currentQuestion.correctAnswer; // Display the name of the country
+    document.getElementById('country-name').textContent = currentQuestion.correctAnswer; // Display the name of the country
 
-    const optionsContainer = document.getElementById('optionsFlagContainer');
+    const optionsContainer = document.getElementById('options-flag-container');
     optionsContainer.innerHTML = '';
 
     currentQuestion.options.forEach(option => {
         const img = document.createElement('img');
         img.src = option.image;
         img.alt = `Flag of ${option.country}`;
-        img.classList.add('flagImage-guess-flag');
+        img.classList.add('flag-image-guess-flag');
         img.addEventListener('click', () => handleAnswer(option.country));
         optionsContainer.appendChild(img);
     });

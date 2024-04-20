@@ -81,7 +81,7 @@ main {
     font-style: italic;
 }
 
-#randomQuote a {
+#random-quote a {
     font-family: 'Lato', sans-serif;
     display: block;
     color: #666;
@@ -264,7 +264,6 @@ main {
     content: "\f024";
 }
 
-
 .modal {
     display: none;
     position: fixed;
@@ -303,7 +302,7 @@ main {
 }
 
 /* Learn Page */
-.learnArrows {
+.learn-arrows {
     width: 30px;
 }
 
@@ -313,14 +312,14 @@ main {
     margin: 2rem;
 }
 
-.ImageContainer {
+.image-container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem 0;
 }
 
-.flagImage {
+.flag-image {
     width: 100%;
     max-width: 500px;
 }
@@ -336,7 +335,7 @@ main {
 }
 
 /* Guess the Country Page*/
-#guessCountryImage {
+#guess-country-image {
     height: 400px;
     width: auto;
     object-fit: contain;
@@ -376,7 +375,7 @@ main {
 }
 
 /* Styles for the container with flags */
-.flagImage-guess-flag {
+.flag-image-guess-flag {
     width: auto;
     height: 12vw;
     cursor: pointer;
@@ -393,13 +392,13 @@ main {
 }
 
 /* CSS for responsive image with borders */
-#imageContainerResult img {
+#image-container-result img {
     max-width: 100%;
     height: auto;
 }
 
 /* Styles for the result text */
-#resultText {
+#result-text {
     margin-top: 20px;
     text-align: left;
     font-family: "Lato", sans-serif;
@@ -414,22 +413,16 @@ main {
 }
 
 /* Media Queries */
-@media (min-width: 768px) {
-    .options-country-container {
-        grid-template-columns: repeat(2, minmax(15rem, 1fr));
-    }
-}
-
 @media (max-width: 768px) {
-    .flagImage {
+    .flag-image {
         max-width: 400px;
     }
 
-    #guessCountryImage {
+    #guess-country-image {
         height: 250px;
     }
 
-    .ImageContainer {
+    .image-container {
         padding: 0.5rem 0;
     }
 
@@ -437,7 +430,7 @@ main {
         text-align: center;
     }
 
-    .flagImage-guess-flag {
+    .flag-image-guess-flag {
         max-width: 300px;
         height: auto;
         width: 100%;
@@ -446,8 +439,14 @@ main {
     }
 }
 
+@media (min-width: 768px) {
+    .options-country-container {
+        grid-template-columns: repeat(2, minmax(15rem, 1fr));
+    }
+}
+
 @media (max-width: 400px) {
-    #guessCountryImage {
+    #guess-country-image {
         height: 150px;
     }
 

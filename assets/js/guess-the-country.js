@@ -70,9 +70,9 @@ let resultsArray = [];
 function displayQuestion() {
     const currentQuestion = questionsArray[currentQuestionIndex];
     document.querySelector('.question-number').textContent = `Question ${currentQuestionIndex + 1} of ${totalQuestions}`;
-    document.getElementById('guessCountryImage').src = currentQuestion.image;
+    document.getElementById('guess-country-image').src = currentQuestion.image;
 
-    const optionsContainer = document.getElementById('optionsCountryContainer');
+    const optionsContainer = document.getElementById('options-country-container');
     optionsContainer.innerHTML = '';
 
     currentQuestion.options.forEach(option => {
